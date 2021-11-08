@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Library Home</h1>
+
+    <p>Приветствую на сайте <em>My Library</em>! Это проект созданный для показа на комиссии на курсе по выбору Python/Django.</p>
+
+ <!--   <h2>Dynamic content</h2> -->
+
+    <p>Состояние нашей библиотеки:</p>
+    <ul>
+        <li><strong>Кол-во книг:</strong> {{ num_books }}</li>
+        <li><strong>Кол-во копий:</strong> {{ num_instances }}</li>
+        <li><strong>Кол-во доступных копий:</strong> {{ num_instances_available }}</li>
+        <li><strong>Кол-во авторов:</strong> {{ num_authors }}</li>
+    </ul>
+
+    <p>Вы посетили эту страницу {{ num_visits }}{% if num_visits == 1 %} time{% else %} раз{% endif %}.</p>
+
+{% endblock %}
